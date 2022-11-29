@@ -51,7 +51,7 @@ export const AnimatedTaskItem = (props: TaskItemProps) => {
     onToggleItem(data)
   }, [data, onToggleItem])
   const handleChangeSubject = useCallback(
-    subject => {
+    (subject: string) => {
       onChangeSubject(data, subject)
     },
     [data, onChangeSubject]

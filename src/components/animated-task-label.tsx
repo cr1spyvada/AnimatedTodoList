@@ -61,7 +61,7 @@ const AnimatedTaskLabel = memo((props: Props) => {
     const easing = Easing.out(Easing.quad)
     if (strikethrough) {
       hstackOffset.value = withSequence(
-        withTiming(4, { duration: 200, easing }),
+        withTiming(10, { duration: 500, easing }),
         withTiming(0, { duration: 200, easing })
       )
       strikethroughWidth.value = withTiming(1, { duration: 400, easing })

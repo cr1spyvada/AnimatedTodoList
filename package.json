@@ -12,6 +12,7 @@
     "@react-navigation/drawer": "^6.5.1",
     "@react-navigation/native": "^6.0.14",
     "@types/shortid": "^0.0.29",
+    "@xstate/react": "^3.0.1",
     "expo": "~47.0.8",
     "expo-linking": "^3.2.3",
     "expo-status-bar": "~1.4.2",
@@ -29,7 +30,8 @@
     "react-native-web": "~0.18.9",
     "shortid": "^2.2.16",
     "styled-components": "^5.3.6",
-    "styled-system": "^5.1.5"
+    "styled-system": "^5.1.5",
+    "xstate": "^4.34.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

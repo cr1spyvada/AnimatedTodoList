@@ -7,7 +7,6 @@ import {
   Text,
   themeTools,
   useColorModeValue,
-  useTheme,
   useToken
 } from 'native-base'
 import React, { useCallback } from 'react'
@@ -18,11 +17,7 @@ import {
 } from 'react-native'
 import AnimatedCheckbox from 'react-native-checkbox-reanimated'
 import AnimatedTaskLabel from './animated-task-label'
-import {
-  PanGestureHandler,
-  PanGestureHandlerProps,
-  PanGestureHandlerGestureEvent
-} from 'react-native-gesture-handler'
+import { PanGestureHandlerProps } from 'react-native-gesture-handler'
 import SwipableView from './swipable-view'
 import { Feather } from '@expo/vector-icons'
 
