@@ -8,7 +8,7 @@ interface todoProps {
   done: boolean
 }
 export const todosMachine =
-  /** @xstate-layout N4IgpgJg5mDOIC5QBcD2FUBsCWtkDpNUBDCSAYjMzGTAAI0MBtABgF1FQAHVWbZbKgB2nEAA9EANgCsATnwAWFrIUAmAIwKA7AGYFklQBoQAT0RKWi2Rq0qF22QA4dAXxfHGWXASKkKAJzBfCFYOJBAePgFhUQkEDUl8FQTHWWkFWR0WNWMzBAsrVQ0WHWlHFml1RzcPdC88QhIyCHIAY0DiWgAVOtDRSP5BEXC47Ud8VQqtaUklfSdHXKlVBXwWdfVpHR11VVnZSRqQTxwG4IpIfh7mdn7eQZiRxD3EyV0p2Wzt7S0lhDlVBMVI5ppIWNN1MojidvI1SAw6rBKMIwPhsEIAG6oADWqJhZyaCIwsAQ6KxrU6Q1CfXCA2iw1AcS2+F2Oi0FSq6zS2j+K0sGU2GUcqUc0lsCmhdVOBAAIkEaOioMihKiyTi8VLYXLqAIhFBSZjUBT6dTbrT7vTYuYFDo1rt1JtnOp2dIZrzZPItNoxaK5M7hYd3MdNQ12mBOvRPMrVYbcfh8QQwxGiagDeTKcJTWFuBahlaEOowfgtI5JKWtG82WDwX8DOoJpIsixVI4fhVXEGE-hLsgU+QAK5cCAR66oGk5qJ5p4IAC0mnkqgrmhYuzKtmkqlr9mLkj52jUCjF6klGGl3Yg-D7sGIGLAo-HEVzj0Zz232V0GRWP1Skj+n-w2yOCsVQth+ehuEGQjoHAogJnck7PuIiBzrIWgTEuSiriCaSbqYiDqGySRAYWHqTDIJSBrUp6wucEDwQ8DJIQgOjCgBBzbJImy7CUvx4fkCj1lo64ruykz2FoJ71D4hKePA5oIYxcQsH8VYsjMqhbBWmStsenYhrK8q6lA9GWtOMhoeCbxvNIXxAYsfFFGhBGSG8GkHI4VSzJJZ5JrQKYmVOL7-Cw4xbA6RQqJpBx-FoKxJBkygaM4Oigd5sI9v58kMbBqBcIgWzjF64KcrM6RuiA1AAGbIIgHlrBulTWJMwrZOoxgAEaoMgaAALb5aWxZKFoJWHoev4gP42BQAAFjV8QrvVGnqE1IXlAoxgAO7YBAyDTfhkzGNNYBTbN5j2XEdUVEtK0tQJfwFYNxXlKVY0QS4QA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QBcD2FUBsCWtkDpNUBDCSAYjMzGTAAI0MBtABgF1FQAHVWbZbKgB2nEAA9EANgAc0-AE4AzLMkB2Fi0kBGFqsUAaEAE9EixZPzrpk+ZIAs0ltIBMygKwBfD4cZZcBIlIKACcwQIhWDiQQHj4BYVEJBGctC3k7FJl5NzslFgzDEwQ7DXxc5xSWRTdHNy1pLx90PzxCEjIIcgBjUOJaABVmyNFY-kERaKTFJXxJCsVcmVV0yXzCqWc7fA0WLTczLWd7W0aQXxxW8IpIfkHmdhHeMYTJxCOLNUUWN2X8sztVKp1gg3PJnPhnOlpKo3KsYTp5Kdzv42kFOmgoFBqHdUMNoqN4hNQElJF8yj95Op5NJ5EpzMC5m58NItIdnDktHZQTIkc0LgF2gxmrBKMIwPhsEIAG6oADW4uRl0FvlgCElMq6fXGkTx3CehMSiH2+EOinUdUcLGyAOBmxYZXke1ysmpFLsvIw-PwABEwjRJVBRUJxeq5Qq+SjfdQBEIoGrpahNYSdQ98frxobinZFNtDqyaootObYbbaZYAT9pG5QUWVB6WgQemA+vRfEGQwn5fhFY3erQhRh4xqtcIU1E9XEM68EKl7aprNZVJ8lxogcYpI6IaSNM5pADzYp616bsgB6hyABXLgQFs43UxdMvYmIAC0nPkEKXnN27Oh2WcDJ2FsS52gCGRcqoWhHiiJ5nuQsDEFKYB3qmE7PES4hvEB2wAgsYJAYCNKSMC5T4GYLh2PUu56Nm7qnEI6BwKIPaPJOT6YQgb6Up+2glIcNTLG4AHrjOZoKC4qRfACkg-KodFNJ6KJXBArHoZmyhyNMpLmHshxVGuRRAVoliCbs6jOPkALQUqpBnvAaZsRhSQsMCZoWHsjJuUoe5Qd4ZwRq0Ub+rGqkGtOMmqNsS7RW4fwuNItrOJFWjmGo7K2Cy1jyf5imtE2LZnqFU7PsUQkQrYRb2LksJAcCVhlIcNg1PsqjzNZBCwb4RXsWgXBGso5a6PUmhclyxEgNQABmyCICy2xCXUYIWbI+RaIYABGqDIGgAC2RrWINkGOPYOQliAwTYFAAAWM3JLs83sloS1OI4diGAA7tgEDIFdiB6YYV1gJdN2IA4hhJHN3yPc9K2UcC+xyHJQ3HaNsJeF4QA */
   createMachine(
     {
       context: {
@@ -28,6 +28,7 @@ export const todosMachine =
           | { type: 'editTodo' }
           | { type: 'updateTodo'; value: { id: string; subject: string } }
           | { type: 'saveTodo' }
+          | { type: 'toggleTodo'; value: string }
       },
       id: 'todolist',
       initial: 'load todos',
@@ -46,6 +47,9 @@ export const todosMachine =
             },
             editTodo: {
               target: 'edit todo'
+            },
+            toggleTodo: {
+              actions: 'toggleTodoFromContext'
             }
           }
         },
@@ -117,6 +121,18 @@ export const todosMachine =
             todos: context.todos.map(todo => {
               if (todo.id === event.data.id)
                 return { ...todo, subject: event.data.subject }
+              else return todo
+            })
+          }
+        }),
+        toggleTodoFromContext: assign((context, event: any) => {
+          return {
+            todos: context.todos.map(todo => {
+              if (event.value === todo.id)
+                return {
+                  ...todo,
+                  done: !todo.done
+                }
               else return todo
             })
           }

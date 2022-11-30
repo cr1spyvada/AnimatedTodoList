@@ -31,6 +31,7 @@ export interface Typegen0 {
     assignFormInputToContext: 'done.invoke.todolist.create todo:invocation[0]'
     assignTodosToContext: 'done.invoke.todolist.load todos:invocation[0]'
     assignUpdatedTodoToContext: 'updateTodo'
+    toggleTodoFromContext: 'toggleTodo'
   }
   eventsCausingServices: {
     deleteTodo: 'delete todo'

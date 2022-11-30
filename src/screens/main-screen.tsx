@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { Center, VStack, useColorModeValue, Fab, Icon } from 'native-base'
 import ThemeToggle from '../components/theme-toggle'
 import { AntDesign } from '@expo/vector-icons'
@@ -47,18 +47,10 @@ export default function MainScreen() {
       }
     }
   })
-  useEffect(() => {
-    console.log({ value: state.value })
-  }, [state.value])
 
   const [editingItemId, setEditingItemId] = useState<string | null>(null)
   const handleToggleTaskItem = useCallback((item: ItemProps) => {
-    setData(prevData => {
-      const newData = [...prevData]
-      const index = prevData.indexOf(item)
-      newData[index] = { ...item, done: !item.done }
-      return newData
-    })
+    send({ type: 'toggleTodo', value: item.id })
   }, [])
   const handleChangeTaskItemSubject = useCallback(
     (item: ItemProps, newSubject: string) => {
@@ -89,7 +81,6 @@ export default function MainScreen() {
   }, [])
   const createTodo = useCallback(() => {
     send({ type: 'createTodo' })
-    console.log('created')
   }, [])
   return (
     <Center
