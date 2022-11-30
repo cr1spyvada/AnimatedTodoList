@@ -110,13 +110,11 @@ export const todosMachine =
           }
         }),
         assignFilteredTodosToContext: assign((context, event: any) => {
-          console.log({ event })
           return {
             todos: context.todos.filter(i => i.id !== event.value)
           }
         }),
         assignUpdatedTodoToContext: assign((context, event: any) => {
-          console.log('updatation')
           return {
             todos: context.todos.map(todo => {
               if (todo.id === event.data.id)
