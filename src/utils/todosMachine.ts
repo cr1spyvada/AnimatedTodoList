@@ -8,7 +8,7 @@ interface todoProps {
   done: boolean
 }
 export const todosMachine =
-  /** @xstate-layout N4IgpgJg5mDOIC5QBcD2FUBsCWtkDpNUBDCSAYjMzGTAAI0MBtABgF1FQAHVWbZbKgB2nEAA9EAVkkt8kgIwBOAGyLJAJmXzlAdgAs8gDQgAnogDMexfkUtlylnfPy9e5ZYC+H44yy4CRKQUAE5ggRCsHEggPHwCwqISCOraNnopygAcalbmLOnGZgh6jvhW6iks5pKZLAqZXj7ofniEJGQQ5ADGocS0ACrNkaKx-IIi0Ul6Opn46nU6ksolboqZmYWIyup6+I4s8pLmzppWyo0gvjit4RSQ-IPM7CO8YwmTiJrK+Lp5kjq2PTHaY6TYISSKdRzRR6TKLByLeQsRQXK7+NqkBjNWCUYRgfDYIQAN1QAGt8Wibu0sRhYAhCSSun1xpFhtFRvEJqAkuo1nI4fkSuYdJZdGCKlCdCLbADFPIkepJKjmtcCAARMI0QlQXFCfEMskUlXojXUARCKD04moJmc1nPdmvTmJRBqH4GFhwlLy+aqMHy3Z5dSZZwadTmZY6ZUYVX4HpgPr0Xy6-XW8n4SkEeOJmmoK2M5nCe1RbhO8YuhDaWQzLK6X46BwsUGmLZyubuRzBkF1czRloEe7IXPkACuXAgiceqDZpbi5Y+CAAtC5rOoGy4Doq4Wp1GDlrsGzt8vodv95H3Y4Ph7BiESwFOZzEy+9uZ9XHtppZIa4pdllGDynwY5Mh2eQQLhSxPAuIR0DgURMxeOcX3ERBl0UHQ5nXEp5C3AENHFSR8BcEN5hFJY1nsC90VuCBELeLkUIQcx1iAlRji0BR5mFACDHwKU1AOHQWHmH8qKpTFfHgR0kIYpIWDBYVvkObYjgbRRmIMMT1U1c0oDo50F0kWEiIFAxeVwyRxVSGQHFqFQ5V0bQtLjXpaFzfT51fcFPTkZwcN5PRVJUMEdB2NJbEhMDjmDKNvEuY1WivXwPOQtAuCkZi+JKHQwLsQLAv-EBqAAM2QRBMnkPYNAUSF5nWfIjBAAAjVBkDQABbKRMm+fQm1y5YjKWYxgmwKAAAsyuSA4qsVJQKk9Wo9GMAB3bAIGQMbEBw+SQDGsBRomxBYWMJIKpmmr5vqgwwSOWZepy2oBoKrwvCAA */
+  /** @xstate-layout N4IgpgJg5mDOIC5QBcD2FUBsCWtkDpNUBDCSAYjMzGTAAI0MBtABgF1FQAHVWbZbKgB2nEAA9EANgCsATnwAWFrIUAmAIwKA7AGYFklQBoQAT0RKWi2Rq0qF22QA4dAXxfHGWXASKkKAJzBfCFYOJBAePgFhUQkEDUl8FQTHWWkFWR0WNWMzBAsrVQ0WHWlHFml1RzcPdC88QhIyCHIAY0DiWgAVOtDRSP5BEXC47Ud8VQqtaUklfSdHXKlVBXwWdfVpHR11VVnZSRqQTxwG4IpIfh7mdn7eQZiRxD3EyV0p2Wzt7S0lhDlVBMVI5ppIWNN1MojidvI1SAw6rBKMIwPhsEIAG6oADWqJhZyaCIwsAQ6KxrU6Q1CfXCA2iw1AcS2+F2Oi0FSq6zS2j+K0sGU2GUcqUc0lsCmhdVOBAAIkEaOioMihKiyTi8VLYXLqAIhFBSZjUBT6dTbrT7vTYuYFDo1rt1JtnOp2dIZrzZPItNoxaK5M7hYd3MdNQ12mBOvRPMrVYbcfh8QQwxGiagDeTKcJTWFuBahlaEOowfgtI5JKWtG82WDwX8DOoJpIsixVI4fhVXEGE-hLsgU+QAK5cCAR66oGk5qJ5p4IAC0mnkqgrmhYuzKtmkqlr9mLkj52jUCjF6klGGl3Yg-D7sGIGLAo-HEVzj0Zz232V0GRWP1Skj+n-w2yOCsVQth+ehuEGQjoHAogJnck7PuIiBzrIWgTEuSiriCaSbqYiDqGySRAYWHqTDIJSBrUp6wucEDwQ8DJIQgOjCgBBzbJImy7CUvx4fkCj1lo64ruykz2FoJ71D4hKePA5oIYxcQsH8VYsjMqhbBWmStsenYhrK8q6lA9GWtOMhoeCbxvNIXxAYsfFFGhBGSG8GkHI4VSzJJZ5JrQKYmVOL7-Cw4xbA6RQqJpBx-FoKxJBkygaM4Oigd5sI9v58kMbBqBcIgWzjF64KcrM6RuiA1AAGbIIgHlrBulTWJMwrZOoxgAEaoMgaAALb5aWxZKFoJWHoev4gP42BQAAFjV8QrvVGnqE1IXlAoxgAO7YBAyDTfhkzGNNYBTbN5j2XEdUVEtK0tQJfwFYNxXlKVY0QS4QA */
   createMachine(
     {
       context: {
@@ -65,7 +65,7 @@ export const todosMachine =
             src: 'deleteTodo',
             onDone: [
               {
-                target: 'load todos'
+                target: 'loaded'
               }
             ]
           }
@@ -106,8 +106,9 @@ export const todosMachine =
           }
         }),
         assignFilteredTodosToContext: assign((context, event: any) => {
+          console.log({ event })
           return {
-            todos: context.todos.filter(i => i !== event.value)
+            todos: context.todos.filter(i => i.id !== event.value)
           }
         }),
         assignUpdatedTodoToContext: assign((context, event: any) => {

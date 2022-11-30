@@ -3,11 +3,6 @@
 export interface Typegen0 {
   '@@xstate/typegen': true
   internalEvents: {
-    'done.invoke.todolist.Deleting:invocation[0]': {
-      type: 'done.invoke.todolist.Deleting:invocation[0]'
-      data: unknown
-      __tip: 'See the XState TS docs to learn how to strongly type this.'
-    }
     'done.invoke.todolist.create todo:invocation[0]': {
       type: 'done.invoke.todolist.create todo:invocation[0]'
       data: unknown
@@ -40,10 +35,7 @@ export interface Typegen0 {
   eventsCausingServices: {
     deleteTodo: 'delete todo'
     fetchNewTodo: 'createTodo'
-    loadTodos:
-      | 'done.invoke.todolist.Deleting:invocation[0]'
-      | 'reload'
-      | 'xstate.init'
+    loadTodos: 'reload' | 'xstate.init'
   }
   eventsCausingGuards: {}
   eventsCausingDelays: {}

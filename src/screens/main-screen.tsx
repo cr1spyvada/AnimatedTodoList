@@ -33,7 +33,7 @@ export default function MainScreen() {
         return data
       },
       deleteTodo: async (context, event) => {
-        setData(data.filter(i => i.id != event.value))
+        setData(context.todos)
       },
       fetchNewTodo: async () => {
         const newTodo = {
