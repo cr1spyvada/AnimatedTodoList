@@ -8,6 +8,11 @@ export interface Typegen0 {
       data: unknown
       __tip: 'See the XState TS docs to learn how to strongly type this.'
     }
+    'done.invoke.todolist.create todo:invocation[0]': {
+      type: 'done.invoke.todolist.create todo:invocation[0]'
+      data: unknown
+      __tip: 'See the XState TS docs to learn how to strongly type this.'
+    }
     'done.invoke.todolist.load todos:invocation[0]': {
       type: 'done.invoke.todolist.load todos:invocation[0]'
       data: unknown
@@ -17,31 +22,36 @@ export interface Typegen0 {
   }
   invokeSrcNameMap: {
     deleteTodo: 'done.invoke.todolist.Deleting:invocation[0]'
+    fetchNewTodo: 'done.invoke.todolist.create todo:invocation[0]'
     loadTodos: 'done.invoke.todolist.load todos:invocation[0]'
   }
   missingImplementations: {
     actions: never
-    services: 'loadTodos' | 'deleteTodo'
+    services: 'loadTodos' | 'deleteTodo' | 'fetchNewTodo'
     guards: never
     delays: never
   }
   eventsCausingActions: {
     assignFilteredTodosToContext: 'delete todo'
-    assignFormInputToContext: 'form input changed'
+    assignFormInputToContext: 'done.invoke.todolist.create todo:invocation[0]'
     assignTodosToContext: 'done.invoke.todolist.load todos:invocation[0]'
+    assignUpdatedTodoToContext: 'updateTodo'
   }
   eventsCausingServices: {
     deleteTodo: 'delete todo'
-    loadTodos: 'done.invoke.todolist.Deleting:invocation[0]' | 'xstate.init'
+    fetchNewTodo: 'createTodo'
+    loadTodos:
+      | 'done.invoke.todolist.Deleting:invocation[0]'
+      | 'reload'
+      | 'xstate.init'
   }
   eventsCausingGuards: {}
   eventsCausingDelays: {}
   matchesStates:
     | 'Deleting'
     | 'create todo'
-    | 'create todo.showing form input'
+    | 'edit todo'
     | 'load todos'
     | 'loaded'
-    | { 'create todo'?: 'showing form input' }
   tags: never
 }

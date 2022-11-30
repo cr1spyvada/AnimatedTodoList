@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { Center, VStack, useColorModeValue, Fab, Icon } from 'native-base'
 import ThemeToggle from '../components/theme-toggle'
 import { AntDesign } from '@expo/vector-icons'
@@ -34,9 +34,23 @@ export default function MainScreen() {
       },
       deleteTodo: async (context, event) => {
         setData(data.filter(i => i.id != event.value))
+      },
+      fetchNewTodo: async () => {
+        const newTodo = {
+          id: shortid.generate(),
+          subject: '',
+          done: false
+        }
+        setData([...data, newTodo])
+        setEditingItemId(newTodo.id)
+        return newTodo
       }
     }
   })
+  useEffect(() => {
+    console.log({ value: state.value })
+  }, [state.value])
+
   const [editingItemId, setEditingItemId] = useState<string | null>(null)
   const handleToggleTaskItem = useCallback((item: ItemProps) => {
     setData(prevData => {
@@ -48,46 +62,34 @@ export default function MainScreen() {
   }, [])
   const handleChangeTaskItemSubject = useCallback(
     (item: ItemProps, newSubject: string) => {
-      // setData(prevData => {
-      //   const newData = [...prevData]
-      //   const index = prevData.indexOf(item)
-      //   newData[index] = {
-      //     ...item,
-      //     subject: newSubject
-      //   }
-      //   return newData
-      // })
-      send({ type: 'form input changed', value: newSubject })
+      setData(prevData => {
+        const newData = [...prevData]
+        const index = prevData.indexOf(item)
+        newData[index] = {
+          ...item,
+          subject: newSubject
+        }
+        return newData
+      })
+      if (state.matches('loaded')) send({ type: 'editTodo' })
+      send({ type: 'updateTodo', data: { id: item.id, subject: newSubject } })
     },
     []
   )
   const handleFinishEditingTaskItem = useCallback((_item: ItemProps) => {
     setEditingItemId(null)
+    send({ type: 'saveTodo' })
   }, [])
   const handlePressTaskItemLabel = useCallback((item: ItemProps) => {
     setEditingItemId(item.id)
+    send({ type: 'editTodo' })
   }, [])
   const handleRemoveItem = useCallback((item: ItemProps) => {
-    // setData(prevData => {
-    //   const newData = prevData.filter(i => i !== item)
-    //   return newData
-    // })
     send({ type: 'delete todo', value: item.id })
   }, [])
   const createTodo = useCallback(() => {
-    // send({ type: 'create new' })
-    const id = shortid.generate()
-    setData([
-      {
-        id,
-        subject: '',
-        done: false
-      },
-      ...data
-    ])
+    send({ type: 'createTodo' })
     console.log('created')
-    setEditingItemId(id)
-    // send({ type: 'loadTodos' })
   }, [])
   return (
     <Center
